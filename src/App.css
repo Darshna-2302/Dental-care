@@ -1,0 +1,927 @@
+.nav-container-fluid{
+    width: 100%;
+    z-index: 1000;
+    background: transparent !important;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 3; 
+}
+
+.nav-container-fluid.scrolled{
+    position: fixed;
+    top: 0;
+    background-color: white !important;    
+}
+
+.nav-container-fluid.nav-container-fluid.scrolled nav .title{
+  color: #000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+nav .title {
+  font-size: 20px;
+  margin: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+ 
+}
+
+nav .title span{
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  margin-top: 15px;
+}
+
+nav ul li {
+ list-style: none; 
+}
+
+.Home-link,.About-link,.Services-link,.Doctor-link,.Blog-link,.Contact-link {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  margin: 0 8px;
+}
+.nav-container-fluid.nav-container-fluid.scrolled nav .Home-link,.nav-container-fluid.nav-container-fluid.scrolled nav .About-link,.nav-container-fluid.nav-container-fluid.scrolled nav .Services-link,.nav-container-fluid.nav-container-fluid.scrolled nav .Doctor-link,.nav-container-fluid.nav-container-fluid.scrolled nav .Blog-link,.nav-container-fluid.nav-container-fluid.scrolled nav .Contact-link{
+  color: #000;
+}
+
+nav .Home-link:active,nav .About-link:active,nav .Services-link:active,nav .Doctor-link:active,nav .Blog-link:active,nav .Contact-link:active{
+   color:darkgrey !important;
+}
+
+.nav-container-fluid.nav-container-fluid.scrolled nav .Home-link:active,nav .About-link:active,nav .Services-link:active,nav .Doctor-link:active,nav .Blog-link:active,nav .Contact-link:active{
+  color:darkgrey !important;
+}
+
+nav .menu {
+  font-size: 18px;
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 36px;
+  height: 32px;
+}
+
+nav .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+nav .btn{
+  background-color: transparent !important;
+  border:1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 30px !important;
+}
+
+.appointment-link{
+  text-decoration: none !important;
+  color:white ;
+}
+
+.nav-container-fluid.nav-container-fluid.scrolled .appointment-link{
+  text-decoration: none !important;
+  color: white;
+  background-color:#2f89fc;
+  border:1px solid #2f89fc !important;
+  border-radius: 30px !important;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  nav .menu {
+      display: flex;
+  }
+  .nav-container-fluid{
+    background-color: #000 !important;
+  }
+
+  .nav-container-fluid.nav-container-fluid.scrolled {
+    background-color: #000 !important;
+  }
+
+  .nav-container-fluid.nav-container-fluid.scrolled nav .title{
+    color: white;
+  }
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: black;
+      position: relative;
+      top:0;
+      margin-left: -40px;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0.25rem;
+  }
+
+  nav ul.open {
+      display: flex;
+  }
+
+  nav ul li {
+      width: 100%;
+      text-align: center;
+  }
+
+  nav ul li a {
+      margin: 0.2rem 0.5rem;
+  }
+}
+ 
+
+/* end of navbar */
+
+/* carousel */
+.carousel-activebg{
+  background-image: url('./images/bg_1.jpg');
+  background-size: cover;
+  height: 850px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position:center center;
+}
+
+.carousel-bg
+{
+  background-image: url('./images/bg_2.jpg');
+  background-size: cover;
+  height: 850px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position:center center;
+}
+
+.overlay{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  content: '';
+  background: #000;
+  opacity: .2;
+}
+
+.carousel-card{
+  position:absolute !important;
+  bottom:370px;
+  width:44%;
+  border: none !important;
+  background-color: transparent !important;
+  padding-left: 30px;
+}
+
+.carousel-head h1{
+  font-weight:400;
+  width:89%;
+  font-size: 40px;
+  color: #fff;
+  line-height: 1.2;
+  font-family: inherit;
+}
+
+.carousel-content p{
+  font-weight:300;
+  line-height: 1.5;
+  font-size: 22px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-button .btn{
+  background-color: #2f89fc !important;
+  border:1px solid transparent;
+  border-radius: 30px !important;
+  padding: 10px;
+  height: 60px;
+  font-size: 18px;
+  color: #fff;
+  width:40%;
+}
+
+.carousel-button .btn:hover{
+  background-color: transparent !important;
+  color: #2f89fc !important;
+}
+
+.carousel-indicators{
+  position: absolute !important;
+  bottom: 170px !important;
+}
+
+.carousel-indicators [data-bs-target]{
+  width:17px !important;
+  height: 17px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(255, 255, 255, 0.5) !important;
+}
+@media (max-width:1024px) {
+  .carousel-button .btn{
+    width: 50%;
+  }
+  
+}
+@media (max-width:768px) {
+  .carousel-card{
+    position:absolute !important;
+    bottom:280px;
+    width:81%;
+    border: none !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    padding-left: 30px;
+  }
+  .carousel-head h1{
+    font-weight:400;
+    width:55%;
+    font-size: 40px;
+    color: #fff;
+    line-height: 1.2;
+    font-family: inherit;
+  }
+  
+  .carousel-content p{
+    font-weight:300;
+    line-height: 1.5;
+    font-size: 22px;
+    width: 60%;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .carousel-button .btn{
+    width: 40%;
+  }
+}
+
+@media (max-width:651px){
+  .carousel-card{
+    position:absolute !important;
+    bottom:275px;
+    width:81%;
+    border: none !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    padding-left: 30px;
+  }
+  .carousel-button .btn{
+    width: 50%;
+  }
+}
+@media (max-width:425px) {
+  .carousel-card{
+    position:absolute !important;
+    bottom:290px;
+    width:81%;
+    border: none !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    padding-left: 30px;
+  }
+  .carousel-head h1{
+    font-weight:400;
+    width:120%;
+    font-size: 40px;
+    color: #fff;
+    line-height: 1.2;
+    font-family: inherit;
+  }
+  
+  .carousel-content p{
+    font-weight:300;
+    line-height: 1.5;
+    font-size: 22px;
+    width: 120%;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .carousel-button .btn{
+    width: 70%;
+  }
+}
+/* dental-intro section */
+ .container {
+  width: 100%;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  margin-right: auto;
+  margin-left: auto;
+}
+.dental-intro{
+  position:relative;
+  bottom: 140px;
+}
+
+.dental-intro .color-1{
+  background: #2cbcbc;
+}
+
+.dental-intro .dental-service-row{
+color: white;
+width: 100% !important;
+}
+
+.dental-intro .dental-service-row,col{
+  margin-right: 17px !important;
+    margin-left: 30px !important;
+}
+
+.dental-intro h3{
+    font-size: 20px;
+    color:#fff;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.dental-intro p{
+  margin-bottom: 16px;
+  font-size:16px;
+  margin-top: 20px;
+}
+
+.dental-intro .phone-no{
+  font-size: 16px;
+}
+
+.dental-intro .color-2{
+  background: #21aac4;
+}
+
+.dental-intro span{
+  font-size: 15px;
+  display: block;
+  line-height: 2.5;
+  font-weight: 400;
+}
+
+.dental-intro .time{
+  text-align: center;
+  margin-left: 90px;
+}
+
+.dental-intro .color-3{
+  background: linear-gradient(135deg, #2f89fc 0%, #2cbcbc 100%);
+}
+
+.appointment-form .row{
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  width: 35%;
+  flex-wrap: nowrap;
+  appearance: none;
+background: transparent !important;
+
+
+}
+
+.col-sm-4{
+  position: relative;
+    width: 100% !important;
+    min-height: 1px;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.dental-intro select {
+  position: relative;
+  margin-bottom: 20px;
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  font-size: 15px !important;
+}
+
+.dental-intro select option{
+  background-color: linear-gradient(135deg, #2f89fc 0%, #2cbcbc 100%)!important;
+  color: black !important;
+}
+
+.dental-intro .form-select{
+  --bs-form-select-bg-img: none !important;
+  height:35px;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+.dental-intro .input-icon{
+  display: flex;
+  height:35px;
+  width:40%;
+}
+
+.dental-intro .input-icon svg{
+  height: 30px;
+  width:20px;
+}
+
+.dental-intro .form-control{
+   background-color: transparent !important;
+   color: white !important;
+   border: none !important;
+   border-radius: 0px !important;
+   box-shadow: none !important;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+   font-size: 15px !important;
+}
+
+
+
+.dental-intro .form-control::placeholder{
+  color: white !important;
+}
+
+.dental-intro input[type="date" i]::-webkit-calendar-picker-indicator{
+  background-image:none !important;
+}
+
+.dental-intro button{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 0px;
+}
+
+
+
+
+.bg-image{
+  background-image: url('./images/bg_1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:450px;
+  background-position: 50% 50%;
+  position: relative;
+}
+
+.bg-image .overlay{
+  background: linear-gradient(135deg, #2f89fc 0%, #2cbcbc 100%);
+}
+/* end of dental-intro */
+
+/* start of dental-intro service1 */
+.services-section{
+  padding: 50px;
+}
+
+/* heading */
+.dental-intro-service1 .service1-heading{
+  color:#2f89fc;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* paragraph */
+.dental-intro-service1 .service1-paracontent{
+   font-size: 16px;
+   color: grey;
+   font-family: inherit;
+   
+   
+}
+
+/* dental-intro card */
+.service-row,.doctor-row{
+  margin-left: 15px !important;
+}
+
+.dental-intro-service1-card{
+  width:100%;
+  margin-bottom:40px;
+}
+
+.service-image{
+  line-height:1.3;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #f8fbff;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.service-body-heading{
+font-size: 20px;
+line-height: 1.5;
+font-weight: 400;
+color: #000;
+margin-bottom: 8px;
+font-family: inherit;
+margin-top: 0;
+box-sizing: border-box;
+display: block;
+}
+
+.service-body-content{
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  width: 91%;
+  line-height: 1.8;
+  color: grey;
+  font-weight: 400;
+}
+
+
+
+.container-full{
+  width: 100%;
+}
+
+.about2-intro-bg{
+   background-image: url('./images/about-2.jpg');
+   background-size:cover;
+   background-repeat: no-repeat; 
+   background-position: center;
+}
+
+.about2-outer{
+   width: 100%;
+   padding: 30px;
+   color: rgba(255, 255, 255, 0.7);
+   background: linear-gradient(135deg, #2f89fc 0%, #2cbcbc 100%);
+}
+
+.about2-heading{
+  margin-left:40px;
+  margin-top: 25px;
+}
+.about2-heading-title{
+  width:70%;
+  line-height: 1.5;
+  font-size: 30px;
+  background: #fff;
+  font-weight: 400;
+  background-clip: text;
+  color: transparent;
+}
+
+.about2-heading-content{
+  width: 80%;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 10px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.about2-list{
+  display: block;
+  margin-bottom: 30px;
+  width:80%;
+  margin-left:30px;
+  margin-top:40px;
+}
+
+.about2-list-icon{
+   margin-top: 20px;
+    width: 60px;
+    height:60px;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   transform: rotate(45deg);
+}
+
+.check-icon{  
+ 
+  margin-left:18px;
+  width:50px;
+  height: 50px;
+  color:#fff;
+  transform: rotate(-45deg);
+  position: relative;
+}
+
+.check-icon svg{
+  height:30px;
+  width: 30px;
+}
+
+.about2-list-text{
+   margin-left: 50px;
+}
+
+.about2-list-heading{
+  font-size: 22px;
+  color: #fff;
+  font-weight: 400;
+  font-family: 'open-sans',arial,sans-serif;
+
+}
+
+.about2-list-para{
+  margin-top: 10px;
+  line-height: 1.7;
+  width:80%;
+  font-size: 17px;
+}
+
+.bg-slider{
+  margin-top: 0px !important;
+  margin-right:-15px !important;
+  margin-left: -15px !important;
+  height: 400px;
+  color: white;
+}
+
+.bg-text{
+  position: relative;
+  margin-left:25px;
+  top: 150px;
+  bottom: 0;
+}
+/* .col-sm-12,.col-md-7{
+  position: relative;
+  min-height: 1px;
+  width: 100% !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  margin-top: 40px !important;
+  margin-left: 40px;
+} */
+
+.home-link,.about-link,.blog-link,.services-link{
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-right: 10px;
+}
+
+.about-link,.blog-link,.services-link{
+  cursor:default;
+}
+
+/* about1-section */
+.about1-section{
+  padding:110px;
+}
+
+.about1-bg{
+  background-image: url('./images/about.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 383px;
+}
+
+.dental-intro-doctor1{
+  padding-top: 110px;
+}
+
+.doctor1-heading{
+  color:#21aac4;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.doctor1-paracontent{
+  font-size: 16px;
+  font-family: inherit;
+  color: grey;
+}
+
+/* tabs */
+.about1-section .nav-tabs{
+  width:100%;
+  --bs-nav-tabs-link-active-color:white;
+  --bs-nav-tabs-link-active-bg: #2f89fc;
+  --bs-nav-tabs-border-radius:0px;
+  --bs-nav-link-border-bottom:1px solid #2f89fc;
+  border-bottom: none;
+}
+
+.about1-section .nav-item{
+  font-family: "Open Sans", Arial, sans-serif;
+  margin-right:10px;
+  text-decoration: none;
+  color:#2f89fc !important;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  width:27%;
+}
+
+.about1-section .nav-link{
+  border-bottom:1px solid #2f89fc !important;
+}
+
+.tab-fullcontent{
+  margin-top: 55px;
+}
+
+.tab-fullcontent h2{
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: black;
+  font-family: inherit;
+}
+
+.tab-fullcontent p{
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: gray;
+  font-family: "Open Sans", Arial, sans-serif;
+  width: 95%;
+}
+
+.doctor-card{
+  padding: 25px;
+  border: 1px solid whitesmoke !important;
+  box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px;
+}
+
+.doctor-card:hover{
+  box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.doctor-card-image img{
+  border-radius: 50%;
+  margin-left: 10px;
+  height: 180px;
+  width: 180px;
+}
+
+.doctor-name{
+  text-decoration: none;
+  color: #000;
+}
+.doctor-card .card-title{
+  margin-top:10px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.5;
+  font-weight: 450;
+}
+
+.card-body .card-role{
+  color:#2f89fc;
+  text-align: center;
+}
+
+.card-body .card-text{
+  text-align: center;
+  width: 115%;
+  color: gray;
+}
+
+.social-media{
+  padding: 35px;
+}
+
+.social-media .twit,.social-media .fb,.social-media .insta,.social-media .google{
+  color: #2f89fc;
+  margin-right: 1px;
+  height: 20px;
+  width: 20px;
+}
+
+.social-media .insta,.social-media .google{
+  margin-right: 5px !important;
+}
+
+@media (max-width:768px) {
+  .dental-intro-service1 .service1-heading{
+    color:#2f89fc;
+    font-size: 30px;
+    font-weight: 400;
+    width: 95%;
+  }
+  .service-body-heading{
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 8px;
+    font-family: inherit;
+    margin-top: 0;
+    box-sizing: border-box;
+    display: block;
+    width:90%;
+    }
+  .service-body-content{
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: 91%;
+    line-height: 1.8;
+    color: grey;
+    font-weight: 400;
+  }
+  .about2-heading-title{
+    width:80%;
+    line-height: 1.5;
+    font-size: 30px;
+    background: #fff;
+    font-weight: 400;
+    background-clip: text;
+    color: transparent;
+  }
+  .about2-heading-content{
+    width: 84%;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  
+.about2-list-heading{
+  font-size: 22px;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: 400;
+  font-family: 'open-sans',arial,sans-serif;
+  width: 107%;
+
+}
+
+.about2-list-para{
+  margin-top: 10px;
+  line-height: 1.7;
+  width:104%;
+  font-size: 17px;
+}
+.doctor1-heading{
+  color:#21aac4;
+  font-size: 30px;
+  font-weight: 400;
+  width: 95%;
+  line-height: 1.5;
+}
+
+}
+.blog-gap{
+  margin-top: 50px;
+}
+
+
+.contact-intro{
+  margin-top: 100px;
+}
+
+h2.heading{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.contact-intro .row{
+  margin-left: 20px !important;
+}
+
+.contact-intro .address,.contact-intro .phone span,.contact-intro .email span,.contact-intro .website span{
+  color: grey;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.contact-intro .phone a,.contact-intro .email a,.contact-intro .website a{
+  text-decoration: none;
+  color: #000;
+}
+
+.contact-intro .form-control{
+  outline: none !important;
+  box-shadow: none !important;
+  font-size: 16px;
+  height: 52px;
+  border: none;
+  border-bottom: 1px solid #e6e6e6 !important;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 0.375rem 0.75rem;
+}
+
+.contact-intro .form-control:focus{
+  border: none;
+  border-bottom: 1px solid #bbbbbb !important;
+}
+
+.blog-btn{
+  margin-left: 30px;
+}
+
